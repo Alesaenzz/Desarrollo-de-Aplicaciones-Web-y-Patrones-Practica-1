@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>ej8</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header class="header">
+            Ejemplo 8: text input
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="ejemplo7practica.html">ejemplo anterior</a></li>
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="ejemplo1practica.html">siguiente ejemplo</a></li>
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="mainmenu.html">volver al menu principal</a></li>
+                </ul>
+            </nav>
+            <article>
+                <h3>convertidor de texto</h3>
+                <input type="text" id="textoEntrada" oninput="formatoTexto()"/>
+                <p>Texto formateado: <span id="textoFormateado"></span></p>
+                <script>
+                    function formatoTexto(){
+                        var textoEntrada = document.getElementById("textoEntrada").value;
+                        var textoFormateado = "<strong><em><u>" + textoEntrada + "</u></em></strong>";
+                        document.getElementById("textoFormateado").innerHTML = textoFormateado;
+                    }
+                </script>
+            </article>
+    </body>
+</html>
